@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-super-form',
@@ -8,10 +8,18 @@ import { FormControl } from '@angular/forms';
 })
 export class SuperFormComponent {
 
-  name = new FormControl('')
+
+  profile = new FormGroup({
+    name: new FormControl(''),
+    username: new FormControl(''),
+    email: new FormControl(''),
+    password: new FormControl(''),
+    confirmPassword: new FormControl(''),
+
+  })
 
   save() {
-    this.name.setValue(this.name.value?.toUpperCase()||'')
+    console.log(this.profile.value)
   }
 
 }
