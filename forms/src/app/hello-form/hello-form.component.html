@@ -1,0 +1,30 @@
+<form #helloForm="ngForm" (ngSubmit)="submit(helloForm)">
+    <p>Hello form: {{[name,username,email,emailConfirm,password,passwordConfirm,telephone]}}</p>
+    
+    <label>Full Name:
+        <input type="text" [(ngModel)]="name" name="name">
+    </label>
+    <label>Username:
+        <input type="text" [(ngModel)]="username" name="username">
+    </label>
+    <br>
+    <label>Email:
+        <input type="text" [(ngModel)]="email" name="email">
+    </label>
+    <label>Confirm email:
+        <input type="text" [(ngModel)]="emailConfirm" name="emailConfirm">
+    </label>
+    <br>
+    <label>Password:
+        <input type="password" [(ngModel)]="password" name="password">
+    </label>
+    <label>Confirm password:
+        <input type="password" [(ngModel)]="passwordConfirm" name="confirm">
+    </label>
+    <br>
+    <label>Telephone:
+        <input type="tel" [(ngModel)]="telephone" name="phone">
+    </label>
+    <br>
+    <input type="submit">
+</form>
